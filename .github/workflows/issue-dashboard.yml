@@ -43,19 +43,19 @@ jobs:
             widgets:
             - type: 'table'
               title: 'Ashley Kolodziej'
-              issue_query: 'is:open is:issue assignee:ashleykolodziej archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:ashleykolodziej archived:false'
             - type: 'table'
               title: 'Dakota Chichester'
-              issue_query: 'is:open is:issue assignee:acketon archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:acketon archived:false'
             - type: 'table'
               title: 'Steve Rudolfi'
-              issue_query: 'is:open is:issue assignee:sr4136 archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:sr4136 archived:false'
             - type: 'table'
               title: 'Jon Brousseau'
-              issue_query: 'is:open is:issue assignee:SigurdTheBruce archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:SigurdTheBruce archived:false'
             - type: 'table'
               title: 'Gary Hedrick'
-              issue_query: 'is:open is:issue assignee:garyhedrick archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:garyhedrick archived:false'
         token: ${{ github.token }}
 
     - name: Publish Documentation
