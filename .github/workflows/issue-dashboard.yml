@@ -27,7 +27,7 @@ jobs:
           description: 'This report runs daily at 8:00am.'
           output:
             format: html
-            filename: 'out/dashboard.html'
+            filename: 'out/index.html'
           sections:
           - title: "Repository Health"
             widgets:
