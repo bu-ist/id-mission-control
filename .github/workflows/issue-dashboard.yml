@@ -1,0 +1,72 @@
+name: Build Dashboard
+
+on:
+  issues:
+    types: [opened, edited, milestoned]
+  schedule:
+  - cron: 0 * * * *
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+    - name: Check out GitHub Pages branch
+      uses: actions/checkout@v2
+      with:
+        ref: 'gh-pages'
+        path: 'out'
+
+    - name: 'Generate Dashboard'
+      uses: ethomson/issue-dashboard@v1.0.2
+      with:
+        config: |
+          title: 'Interactive Design Mission Control'
+          output:
+            format: html
+            filename: 'out/dashboard.html'
+          sections:
+          - title: "Repository Health"
+            widgets:
+            - type: graph
+              elements:
+                - title: 'Open issues unassigned to a project'
+                  issue_query: 'repo:${{ github.repository }} is:open is:issue no:project'
+                - title: 'Open Issues'
+                  issue_query: 'repo:${{ github.repository }} is:issue is:open'
+                - title: 'Closed Issues'
+                  issue_query: 'repo:${{ github.repository }} is:issue is:closed'
+          - title: "Creative Directors"
+            widgets:
+            - type: 'table'
+              title: 'Ashley Kolodziej'
+              fields:
+              issue_query: 'is:open is:issue assignee:ashleykolodziej archived:false'
+            - type: 'table'
+              title: 'Dakota Chichester'
+              fields:
+              issue_query: 'is:open is:issue assignee:acketon archived:false'
+            - type: 'table'
+              title: 'Steve Rudolfi'
+              fields:
+              issue_query: 'is:open is:issue assignee:sr4136 archived:false'
+            - type: 'table'
+              title: 'Jon Brousseau'
+              fields:
+              issue_query: 'is:open is:issue assignee:SigurdTheBruce archived:false'
+            - type: 'table'
+              title: 'Gary Hedrick'
+              fields:
+              issue_query: 'is:open is:issue assignee:garyhedrick archived:false'
+        token: ${{ github.token }}
+
+    - name: Publish Documentation
+      run: |
+        git add .
+        git config user.name 'Dashboard User'
+        git config user.email 'nobody@nowhere'
+        git commit -m 'Documentation update' --allow-empty
+        git push origin gh-pages
+      working-directory: out
