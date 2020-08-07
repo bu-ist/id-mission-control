@@ -88,6 +88,20 @@ jobs:
             - type: 'table'
               title: 'Corin Miller'
               issue_query: 'is:open is:issue org:bu-ist assignee:corinmiller archived:false'
+          - title: "Developers"
+            widgets:
+            - type: 'table'
+              title: 'Steve Rudolfi'
+              issue_query: 'is:open is:issue org:bu-ist assignee:sr4136 archived:false'
+            - type: 'table'
+              title: 'Alana Martin'
+              issue_query: 'is:open is:issue org:bu-ist assignee:stonybrookweb archived:false'
+            - type: 'table'
+              title: 'Jim Reevior'
+              issue_query: 'is:open is:issue org:bu-ist assignee:hirozed archived:false'
+            - type: 'table'
+              title: 'Brianne Hinchliffe'
+              issue_query: 'is:open is:issue org:bu-ist assignee:brianner archived:false'
         token: ${{ github.token }}
 
     - name: Publish Documentation
