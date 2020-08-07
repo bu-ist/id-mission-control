@@ -2,9 +2,9 @@ name: Build Dashboard
 
 on:
   issues:
-    types: [opened, edited, milestoned]
+    types: [edited]
   schedule:
-  - cron: 0 * * * *
+  - cron: 0 8 * * *
 
 jobs:
   build:
@@ -24,6 +24,7 @@ jobs:
       with:
         config: |
           title: 'Interactive Design Mission Control'
+          description: 'This report runs daily at 8:00am.'
           output:
             format: html
             filename: 'out/dashboard.html'
@@ -42,23 +43,18 @@ jobs:
             widgets:
             - type: 'table'
               title: 'Ashley Kolodziej'
-              fields:
               issue_query: 'is:open is:issue assignee:ashleykolodziej archived:false'
             - type: 'table'
               title: 'Dakota Chichester'
-              fields:
               issue_query: 'is:open is:issue assignee:acketon archived:false'
             - type: 'table'
               title: 'Steve Rudolfi'
-              fields:
               issue_query: 'is:open is:issue assignee:sr4136 archived:false'
             - type: 'table'
               title: 'Jon Brousseau'
-              fields:
               issue_query: 'is:open is:issue assignee:SigurdTheBruce archived:false'
             - type: 'table'
               title: 'Gary Hedrick'
-              fields:
               issue_query: 'is:open is:issue assignee:garyhedrick archived:false'
         token: ${{ github.token }}
 
