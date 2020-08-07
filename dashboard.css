@@ -1,0 +1,180 @@
+body {
+	background: #f6f8fa;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	background: #24292e;
+	color: #fff;
+	font-weight: 600;
+	font-size: 20px;
+	padding: 16px;
+	margin: 0;
+}
+
+h1::before {
+	content: "🚀";
+	margin-right: 10px;
+}
+
+.sections {
+	padding: 24px;
+}
+
+.section_title {
+	border-radius: 25px;
+	display: inline-block;
+	font-size: 17px;
+	padding: 9px 19px;
+}
+
+.section_title::before {
+	margin-right: 10px;
+}
+
+.section_title.to-do {
+	background: #D0F3AE;
+}
+
+.section_title.to-do::before {
+	content: "✅";
+}
+
+.section_title.needs-input {
+	background: #FFE8A9;
+}
+
+.section_title.needs-input::before {
+	content: "🧐";
+}
+
+.section_widgets {
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 5px;
+}
+
+.table_widget {
+	background-color: #fafbfc;
+	border-radius: 6px;
+	border: 1px solid #d1d5da;
+	display: none; /* Only show tables with data. */
+	font-size: 14px;
+	margin-bottom: 20px;
+	padding: 15px;
+}
+
+.table_widget.show {
+	display: block;
+}
+
+.table_widget th {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+td {
+	vertical-align: baseline;
+}
+
+td a {
+	color: inherit;
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+td:first-child a {
+	border-radius: 2px;
+	border: 1px solid;
+	color: #28a745;
+	display: block;
+	font-size: 12px;
+	margin-right: 2px;
+	padding: 2px;
+	text-align: center;
+	text-decoration: none;
+}
+
+td:first-child a::before {
+    content: "#";
+}
+
+h3 {
+	background: #24292e;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 600;
+	margin: -16px -16px 16px;
+	padding: 12px;
+}
+
+h3 a {
+	color: inherit !important;
+	text-decoration: none;
+}
+
+th {
+	text-align: left;
+}
+
+.description {
+	margin-bottom: 24px;
+}
+
+/* Graph widgets */
+
+.graph {
+	display: table;
+}
+.graph_item {
+	display: table-row;
+}
+.graph_item_title {
+	display: table-cell;
+	vertical-align: right;
+	padding: 5px 10px 5px 0;
+	white-space: nowrap;
+}
+.graph_item_value {
+	display: table-cell;
+	width: 100%;
+	padding-right: 7px;
+	border-left: solid 1px #dddddd;
+}
+.graph_item_value .value {
+	display: block;
+	height: 15px;
+	text-align: right;
+	padding-right: 5px;
+	font-size: 11px;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.graph_item_value .empty_value {
+	padding-right: 0;
+}
+
+.graph_item:last-of-type .graph_item_value {
+	border-bottom: solid 1px #dddddd;
+}
+
+#footer {
+	background: #24292e;
+	color: #fff;
+	font-weight: 600;
+	font-size: 12px;
+	padding: 16px 24px;
+}
+
+#footer a {
+	color: inherit !important;
+}
