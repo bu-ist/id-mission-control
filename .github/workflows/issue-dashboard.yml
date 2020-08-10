@@ -34,7 +34,7 @@ jobs:
                 return '';
               }
               else {
-                return 'is assigned';
+                return '<img src="' + assignee.avatar_url + '" />';
               }
             }
           sections:
