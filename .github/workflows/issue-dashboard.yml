@@ -300,7 +300,7 @@ jobs:
                   property: 'title'
                 - title: 'Project'
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
-        token: ${{ github.token }}
+        token: ${{ secrets.ID_MISSION_CONTROL }}
 
     - name: Publish Documentation
       run: |
