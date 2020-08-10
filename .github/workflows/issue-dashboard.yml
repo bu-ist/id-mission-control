@@ -50,7 +50,7 @@ jobs:
                 - title: 'Title'
                   property: 'title'
                 - title: 'Assigned to:'
-                  script: 'return function() { if ( "null" !== item.assignee ) { return item.assignee.login } }'
+                  script: 'return function() { if ( "null" !== item.assignee ) { console.log( item ) return item.assignee['login'] } }'
             - type: 'table'
               title: 'Dakota Chichester'
               issue_query: 'is:open is:issue org:bu-ist assignee:acketon archived:false'
