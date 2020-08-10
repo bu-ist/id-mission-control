@@ -28,6 +28,15 @@ jobs:
           output:
             format: html
             filename: 'out/index.html'
+          setup: |
+            userdata.avatar = function( assignee ) {
+              if ( null === assignee || undefined === assignee ) {
+                return '';
+              }
+              else {
+                return 'is assigned';
+              }
+            }
           sections:
           - title: "Repository Health"
             widgets:
@@ -51,6 +60,8 @@ jobs:
                   property: 'title'
                 - title: 'Project'
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
+                - title: 'Assignee'
+                  value: '{{ userdata.avatar( item.assignee ) }}'
             - type: 'table'
               title: 'Dakota Chichester'
               issue_query: 'is:open is:issue org:bu-ist assignee:acketon archived:false'
