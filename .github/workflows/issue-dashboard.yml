@@ -37,6 +37,15 @@ jobs:
                 return '<img src="' + assignee.avatar_url + '" />';
               }
             }
+
+            userdata.url = function( assignee ) {
+              if ( null === assignee || undefined === assignee ) {
+                return '';
+              }
+              else {
+                return assignee.html_url;
+              }
+            }
           sections:
           - title: "Repository Health"
             widgets:
@@ -62,7 +71,8 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
                 - title: 'Assignee'
                   value: '{{ userdata.avatar( item.assignee ) }}'
-                  url: 'http://www.bu.edu'
+              elements:
+                - [ '4', { url: {{ userdata.url( item.assignee ) }} } ]
             - type: 'table'
               title: 'Dakota Chichester'
               issue_query: 'is:open is:issue org:bu-ist assignee:acketon archived:false'
