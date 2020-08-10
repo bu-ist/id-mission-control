@@ -24,7 +24,7 @@ jobs:
       with:
         config: |
           title: 'Interactive Design Mission Control'
-          description: 'This report runs daily at 8:00am.'
+          description: 'This report runs daily at 4:00am.'
           output:
             format: html
             filename: 'out/index.html'
