@@ -52,7 +52,7 @@ h1::before {
 
 .section_widgets {
 	display: grid;
-	grid-auto-flow: column;
+	grid-template-columns: repeat( auto-fit, minmax( 350px, 1fr ) );
 	grid-gap: 5px;
 }
 
@@ -127,6 +127,11 @@ th {
 
 .description {
 	margin-bottom: 24px;
+}
+
+td img {
+	border-radius: 50%;
+	width: 20px;
 }
 
 /* Graph widgets */
