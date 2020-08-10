@@ -44,6 +44,9 @@ jobs:
             - type: 'table'
               title: 'Ashley Kolodziej'
               issue_query: 'is:open is:issue org:bu-ist assignee:ashleykolodziej archived:false'
+              fields:
+                - title: 'Data'
+                  value: '{{ item }}'
             - type: 'table'
               title: 'Dakota Chichester'
               issue_query: 'is:open is:issue org:bu-ist assignee:acketon archived:false'
@@ -102,6 +105,25 @@ jobs:
             - type: 'table'
               title: 'Brianne Hinchliffe'
               issue_query: 'is:open is:issue org:bu-ist assignee:brianner archived:false'
+          - title: "Producers"
+            widgets:
+            - type: 'table'
+              title: 'Damien Garica'
+              issue_query: 'is:open is:issue org:bu-ist assignee:damieng1 archived:false'
+            - type: 'table'
+              title: 'Gabriella Ketema'
+              issue_query: 'is:open is:issue org:bu-ist assignee:gabktm archived:false'
+            - type: 'table'
+              title: 'Andrew Emery'
+              issue_query: 'is:open is:issue org:bu-ist assignee:aremery archived:false'
+          - title: "Project Managers"
+            widgets:
+            - type: 'table'
+              title: 'Kristen Ibbitson'
+              issue_query: 'is:open is:issue org:bu-ist assignee:kibbitso archived:false'
+            - type: 'table'
+              title: 'Steve West'
+              issue_query: 'is:open is:issue org:bu-ist assignee:westsbu archived:false'
         token: ${{ github.token }}
 
     - name: Publish Documentation
