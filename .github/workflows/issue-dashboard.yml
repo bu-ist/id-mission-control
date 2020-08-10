@@ -46,7 +46,7 @@ jobs:
               issue_query: 'is:open is:issue org:bu-ist assignee:ashleykolodziej archived:false'
               fields:
                 - title: 'Data'
-                  value: '{{ item }}'
+                  value: '{{ item.assignee }}'
             - type: 'table'
               title: 'Dakota Chichester'
               issue_query: 'is:open is:issue org:bu-ist assignee:acketon archived:false'
