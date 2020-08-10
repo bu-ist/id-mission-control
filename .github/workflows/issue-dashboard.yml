@@ -43,16 +43,16 @@ jobs:
             - type: graph
               elements:
                 - title: 'Open issues unassigned to a project'
-                  issue_query: 'repo:${{ github.repository }} is:open is:issue is:public is:private no:project'
+                  issue_query: 'repo:${{ github.repository }} is:open is:issue no:project'
                 - title: 'Open Issues'
-                  issue_query: 'repo:${{ github.repository }} is:issue is:public is:private is:open'
+                  issue_query: 'repo:${{ github.repository }} is:issue is:open'
                 - title: 'Closed Issues'
-                  issue_query: 'repo:${{ github.repository }} is:issue is:public is:private is:closed'
+                  issue_query: 'repo:${{ github.repository }} is:issue is:closed'
           - title: "Creative Directors"
             widgets:
             - type: 'table'
               title: 'Ashley Kolodziej'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:ashleykolodziej archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:ashleykolodziej archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -64,7 +64,7 @@ jobs:
                   value: '{{ userdata.avatar( item.assignee ) }}'
             - type: 'table'
               title: 'Dakota Chichester'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:acketon archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:acketon archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -74,7 +74,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Steve Rudolfi'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:sr4136 archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:sr4136 archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -84,7 +84,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Jon Brousseau'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:SigurdTheBruce archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:SigurdTheBruce archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -94,7 +94,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Gary Hedrick'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:garyhedrick archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:garyhedrick archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -106,7 +106,7 @@ jobs:
             widgets:
             - type: 'table'
               title: 'Charlie Guerrero'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:gcharlie archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:gcharlie archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -116,7 +116,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Crystal Seitz'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:crystalms archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:crystalms archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -126,7 +126,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'RJ Foley IV'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:rjfoleyiv archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:rjfoleyiv archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -136,7 +136,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Angela McKenzie'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:amckenz archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:amckenz archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -146,7 +146,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Nathan Trueblood'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:True88 archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:True88 archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -156,7 +156,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Michael Jordan'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:saucyrooster archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:saucyrooster archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -166,7 +166,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Andrea Cacase'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:acacase archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:acacase archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -176,7 +176,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Tim Spears'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:tspears1BU archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:tspears1BU archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -186,7 +186,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Kayla Gigandet'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:mgigande archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:mgigande archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -196,7 +196,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Corin Miller'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:corinmiller archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:corinmiller archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -208,7 +208,7 @@ jobs:
             widgets:
             - type: 'table'
               title: 'Steve Rudolfi'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:sr4136 archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:sr4136 archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -218,7 +218,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Alana Martin'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:stonybrookweb archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:stonybrookweb archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -228,7 +228,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Jim Reevior'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:hirozed archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:hirozed archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -238,7 +238,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Brianne Hinchliffe'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:brianner archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:brianner archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -250,7 +250,7 @@ jobs:
             widgets:
             - type: 'table'
               title: 'Damien Garica'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:damieng1 archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:damieng1 archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -260,7 +260,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Gabriella Ketema'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:gabktm archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:gabktm archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -270,7 +270,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Andrew Emery'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:aremery archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:aremery archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -282,7 +282,7 @@ jobs:
             widgets:
             - type: 'table'
               title: 'Kristen Ibbitson'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:kibbitso archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:kibbitso archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
@@ -292,7 +292,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
             - type: 'table'
               title: 'Steve West'
-              issue_query: 'is:open is:issue is:public is:private org:bu-ist assignee:westsbu archived:false'
+              issue_query: 'is:open is:issue org:bu-ist assignee:westsbu archived:false'
               fields:
                 - title: 'Issue'
                   property: 'number'
