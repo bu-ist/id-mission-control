@@ -62,6 +62,7 @@ jobs:
                   value: '{{ /[^/]*$/.exec( item.repository_url )[0] }}'
                 - title: 'Assignee'
                   value: '{{ userdata.avatar( item.assignee ) }}'
+                  url: 'http://www.bu.edu'
             - type: 'table'
               title: 'Dakota Chichester'
               issue_query: 'is:open is:issue org:bu-ist assignee:acketon archived:false'
