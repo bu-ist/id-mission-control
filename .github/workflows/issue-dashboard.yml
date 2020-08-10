@@ -50,7 +50,7 @@ jobs:
                 - title: 'Title'
                   property: 'title'
                 - title: 'Assigned to:'
-                  value: '{{ if ( "null" !== item.assignee ) { return item.assignee.login } }}'
+                  value: '{{ item.assignee.login }}'
                   # script: 'return function( item ) {  }'
             - type: 'table'
               title: 'Dakota Chichester'
